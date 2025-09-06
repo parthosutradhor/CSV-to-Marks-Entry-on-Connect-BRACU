@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "CSV → Marks Entry by Partho Sutra Dhor",
+  "description": "Adds a CSV uploader to the final mark entry page and fills marks into the form based on your CSV.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Fill Marks from CSV (Click to inject panel)"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://connect.bracu.ac.bd/app/exam-controller/mark-entry/final/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://connect.bracu.ac.bd/app/exam-controller/mark-entry/final/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles.css",
+        "icons/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "author": "Partho Sutra Dhor"
+}
