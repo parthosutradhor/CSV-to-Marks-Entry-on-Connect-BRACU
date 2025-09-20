@@ -153,7 +153,8 @@
         marksEl.title = '⚠ Final Marks is Absent per CSV';
         // Try to set status to Absent
         const sel = row.querySelector(CONFIG.statusSelector);
-        if (sel) {
+        /*
+		if (sel) {
           sel.click();
           setTimeout(() => {
             const opts = document.querySelectorAll('mat-option .mat-mdc-option-text, mat-option .mdc-list-item__primary-text');
@@ -161,6 +162,7 @@
             if (absentOpt) absentOpt.click();
           }, 200);
         }
+		*/
         // Try to add remark
         let remarks = row.querySelector('input[placeholder="Remarks"], input[aria-label="Remarks"]') || row.querySelector('input[id*="final-remarks"]');
         if (remarks && remarks.value !== 'Absent from final exam') {
