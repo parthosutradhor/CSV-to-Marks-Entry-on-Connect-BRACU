@@ -86,7 +86,9 @@
     const cleaned = String(raw).replace(/[()]/g, '').replace(/,/g, '').trim();
     if (!cleaned) return null;
     const num = parseFloat(cleaned);
-    return Number.isNaN(num) ? null : Number(num).toFixed(2);
+    if (Number.isNaN(num)) return null;
+	if (num === 100) return "100";
+	return num.toFixed(2);
   };
 
   const parseFinalCell = (raw) => {
