@@ -2,7 +2,7 @@
 chrome.action.onClicked.addListener(async (tab) => {
   if (!tab?.id || !tab.url) return;
   // Only inject on the allowed pattern
-  const allow = /^https:\/\/connect\.bracu\.ac\.bd\/app\/exam-controller\/mark-entry\/final\//.test(tab.url);
+  const allow = /^https:\/\/connect\.bracu\.ac\.bd\/app\/exam-controller\/mark-entry\//.test(tab.url);
   if (!allow) return;
   try {
     await chrome.scripting.executeScript({

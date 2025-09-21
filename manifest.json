@@ -18,12 +18,12 @@
     "scripting"
   ],
   "host_permissions": [
-    "https://connect.bracu.ac.bd/app/exam-controller/mark-entry/final/*"
+    "https://connect.bracu.ac.bd/app/exam-controller/mark-entry/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://connect.bracu.ac.bd/app/exam-controller/mark-entry/final/*"
+        "https://connect.bracu.ac.bd/app/exam-controller/mark-entry/*"
       ],
       "js": [
         "content.js"

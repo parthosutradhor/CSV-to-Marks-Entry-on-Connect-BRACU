@@ -1,7 +1,7 @@
 (() => {
   if (window.__FILL_MARKS_PANEL__) return;
   // Only run on the allowed pattern as an extra guard
-  if (!/^https:\/\/connect\.bracu\.ac\.bd\/app\/exam-controller\/mark-entry\/final\//.test(location.href)) return;
+  if (!/^https:\/\/connect\.bracu\.ac\.bd\/app\/exam-controller\/mark-entry\//.test(location.href)) return;
   window.__FILL_MARKS_PANEL__ = true;
 
   // =========================
